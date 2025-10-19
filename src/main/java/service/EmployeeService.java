@@ -10,7 +10,7 @@ import java.util.HashMap;
 
 public class EmployeeService {
 
-    Employee getEmployeeById(int id, List<Employee> employees){
+    public Employee getEmployeeById(int id, List<Employee> employees){
 
         if (employees == null || id < 0){
                 throw new EmployeeNotFoundException("Invalid input: employees list is null or ID is negative");
@@ -25,7 +25,7 @@ public class EmployeeService {
         throw new EmployeeNotFoundException(id);
     }
 
-    List<Employee> getEmployeesBySalaryGreaterThan(int targetSalary, List<Employee> employees){
+    public List<Employee> getEmployeesBySalaryGreaterThan(int targetSalary, List<Employee> employees){
         if (employees == null || targetSalary < 0){
             throw new EmployeeNotFoundException("Invalid input: employees list is null or targetSalary is negative");
         }

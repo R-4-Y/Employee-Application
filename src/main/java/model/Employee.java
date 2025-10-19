@@ -55,7 +55,7 @@ public class Employee {
     @Override
     public String toString() {
         return String.format(
-                "Employee{id=%d, firstName='%s', lastName='%s', salary=%d}",
+                "%d,%s,%s,%d",
                 id, firstName, lastName, salary
         );
     }
