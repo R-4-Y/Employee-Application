@@ -40,6 +40,7 @@ public class FileService {
                 try {
                     String[] tmpEmployee = line.split(",");
                     Employee employee = new Employee(Integer.parseInt(tmpEmployee[0]),tmpEmployee[1],tmpEmployee[2],Integer.parseInt(tmpEmployee[3]));
+                    loadEmployee.add(employee);
                 }catch (Exception e){
                     System.err.println("Error from read : " + line + " - " + e.getMessage());
                 }
