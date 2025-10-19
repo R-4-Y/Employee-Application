@@ -1,5 +1,6 @@
 import model.Employee;
 import service.EmployeeService;
+import service.FileService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,9 +28,13 @@ public class MainApplication {
         employeeList.add(employee8);
 
         System.out.println(new EmployeeService().getEmployeeById(8,employeeList));
+        //System.out.println(new EmployeeService().getEmployeeById(12,employeeList));
         System.out.println(new EmployeeService().getEmployeesBySalaryGreaterThan(500000,employeeList));
 
+        System.out.println(new EmployeeService().getEmployeeMap(employeeList));
 
+        new FileService().saveEmployeesToFile(employeeList, "test.txt");
+        System.out.println(new FileService().loadEmployeesFromFile("test.txt"));
 
 
 
